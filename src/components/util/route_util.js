@@ -14,6 +14,7 @@ const Private = ({ component: Component, ...args }) => {
 };
 
 const Restricted = ({ component: Component, ...args }) => {
+  const { isAuthenticated } = useAuth0();
   return (
     <Route 
       {...args}
