@@ -1,12 +1,24 @@
 import React from 'react';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
-const Private = () => {
-
+const Private = ({ component: Component, ...args }) => {
+  return (
+    <Route 
+      {...args} 
+      render={props => isLoggedIn ? 
+        <Component {...props} /> : <Redirect to='/' />}
+    />
+  );
 };
 
-const Restricted = () => {
-
+const Restricted = ({ component: Component, ...args }) => {
+  return (
+    <Route 
+      {...args}
+      render={props => !isLoggedIn ? 
+        <Component {...props} /> : <Redirect to='/signup' />}
+    />
+  );
 };
 
 export const PrivateRoute = withRouter(Private);
