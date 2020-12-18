@@ -17,7 +17,6 @@ export const Modal = ({ modal, setModal }) => {
 }
 
 const ModalBackground = styled.div`
-  display: flex;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -25,7 +24,6 @@ const ModalBackground = styled.div`
   left: 0;
   background: #000000b3;
   z-index: 9000;
-  display: flex;
 `;
 
 const ModalChild = styled.div`
@@ -36,6 +34,10 @@ const ModalChild = styled.div`
   background: white;
   box-shadow: 50px;
   border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 `;
 
 const Auth0Button = styled.button`
@@ -43,10 +45,12 @@ const Auth0Button = styled.button`
   color: black;
   background-color: gray;
   transition: background-color 0.75s, color 0.75s;
+  padding: 2px;
+  margin: 5px;
 
   &:hover {
     cursor: pointer;
-    color: white:
+    color: white;
     background-color: blue;
   }
 `;

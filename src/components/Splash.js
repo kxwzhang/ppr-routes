@@ -13,20 +13,23 @@ export const Splash = withRouter(({ history }) => {
   if (isLoading) return <div>Loading...</div>
 
   return (
-    <div>
+    <SplashContainer>
       <div>Auth0 Test</div>
       {!isAuthenticated && <Login modal={modal} setModal={setModal} />}
       {isAuthenticated && <Logout />}
       {modal && <Modal modal={modal} setModal={setModal} />}
+      {isAuthenticated && 
       <ProfileButton onClick={() => history.push('/profile')}>
         Visit My Profile
-      </ProfileButton>
-    </div>
+      </ProfileButton>}
+    </SplashContainer>
   )
 })
 
 const SplashContainer = styled.div`
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ProfileButton = styled.button`
