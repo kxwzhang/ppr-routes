@@ -14,7 +14,7 @@ export const Login = ({ modal, setModal }) => {
       </ModalBackground>
     </div>
   )
-};
+}
 
 const ModalBackground = styled.div`
   position: fixed;

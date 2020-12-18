@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Redirect, withRouter } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Private = ({ component: Component, ...args }) => {
+  const { isAuthenticated } = useAuth0();
   return (
     <Route 
       {...args} 
-      render={props => isLoggedIn ? 
+      render={props => isAuthenticated ? 
         <Component {...props} /> : <Redirect to='/' />}
     />
   );
@@ -15,8 +17,8 @@ const Restricted = ({ component: Component, ...args }) => {
   return (
     <Route 
       {...args}
-      render={props => !isLoggedIn ? 
-        <Component {...props} /> : <Redirect to='/signup' />}
+      render={props => !isAuthenticated ? 
+        <Component {...props} /> : <Redirect to='/login' />}
     />
   );
 };
