@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react';
 import styled from 'styled-components';
+
+export const Login = ({ modal, setModal }) => {
+  const { loginWithRedirect } = useAuth0();
+  return (
+    <div>
+      <ModalBackground onClick={() => setModal(false)}>
+        <ModalChild>
+          <div>Please Sign In with Auth0</div>
+          <Auth0Button onClick={() => loginWithRedirect()}>Sign In</Auth0Button>
+        </ModalChild>
+      </ModalBackground>
+    </div>
+  )
+};
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -23,14 +37,15 @@ const ModalChild = styled.div`
   border-radius: 2%;
 `;
 
-export const Login = () => {
-  return (
-    <div>
-      <ModalBackground>
-        <ModalChild>
-          
-        </ModalChild>
-      </ModalBackground>
-    </div>
-  )
-}
+const Auth0Button = styled.button`
+  border: none;
+  color: black;
+  background-color: gray;
+  transition: background-color 0.75s, color 0.75s;
+
+  &:hover {
+    cursor: pointer;
+    color: white:
+    background-color: blue;
+  }
+`;
