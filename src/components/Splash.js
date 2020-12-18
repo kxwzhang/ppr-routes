@@ -25,6 +25,10 @@ export const Splash = withRouter(({ history }) => {
   )
 })
 
+const SplashContainer = styled.div`
+
+`;
+
 const ProfileButton = styled.button`
   border: none;
   background-color: gray;

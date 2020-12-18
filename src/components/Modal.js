@@ -17,6 +17,7 @@ export const Modal = ({ modal, setModal }) => {
 }
 
 const ModalBackground = styled.div`
+  display: flex;
   position: fixed;
   top: 0;
   bottom: 0;
