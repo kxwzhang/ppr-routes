@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Switch>
-        <PrivateRoute exact path='/profile' component={Profile} />
-        <PrivateRoute exact path='/album' component={Album} />
+        <ProtectedRoute exact path='/profile' component={Profile} />
+        <ProtectedRoute exact path='/album' component={Album} />
         <Route exact path='/' component={Splash} />
       </Switch>
     </div>
