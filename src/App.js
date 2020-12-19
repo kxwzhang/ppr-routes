@@ -10,7 +10,7 @@ function App() {
     <div>
       <Switch>
         <PrivateRoute exact path='/profile' component={Profile} />
-        <PrivateRoute exact path='/ablum' component={Album} />
+        <PrivateRoute exact path='/album' component={Album} />
         <Route exact path='/' component={Splash} />
 
       </Switch>

@@ -10,14 +10,12 @@ export const Splash = withRouter(({ history }) => {
   const [modal, setModal] = useState(false);
   const { isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) return <div>Loading...</div>
-
+  if (isLoading) return (<div>Loading...</div>);
   if (isAuthenticated) {
     return (
       <SplashContainer>
         <div>Auth0 Test</div>
         <Logout />
-        {modal && <Modal modal={modal} setModal={setModal} />}
         <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
           Visit My Profile
         </ProfileButton>
@@ -27,13 +25,15 @@ export const Splash = withRouter(({ history }) => {
       </SplashContainer>
     );
   }
-
-  return (
-    <SplashContainer>
-      <div>Auth0 Test</div>
-      {!isAuthenticated && <Login modal={modal} setModal={setModal} />}
-    </SplashContainer>
-  )
+  if (!isAuthenticated) {
+    return (
+      <SplashContainer>
+        <div>Auth0 Test</div>
+        <Login modal={modal} setModal={setModal} />
+        {modal && <Modal modal={modal} setModal={setModal} />}
+      </SplashContainer>
+    )
+  }
 })
 
 /* Tachyon Styles */
