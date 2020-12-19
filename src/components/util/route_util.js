@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { Component, useContext } from 'react';
 import { Route, Redirect, withRouter } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
+import { UserContext } from './user_context';
+
+const Protected = ({ component: Component, ...args }) => {
+  return (
+    <Route 
+      {...args}
+      render={props => withAuthenticationRequired(<Component {...props} />, {
+        onRedirecting: () => (<div>Redirecting you to the login page...</div>)
+      })}
+    />
+  );
+}
 
 const Private = ({ component: Component, ...args }) => {
   const { isAuthenticated } = useAuth0();
+  const { user, setUser } = useContext(UserContext);
   return (
     <Route 
       {...args} 
@@ -24,5 +37,6 @@ const Restricted = ({ component: Component, restricted, ...args }) => {
   );
 };
 
+export const ProtectedRoute = withRouter(Protected);
 export const PrivateRoute = withRouter(Private);
 export const RestrictedRoute = withRouter(Restricted);
