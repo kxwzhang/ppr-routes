@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
