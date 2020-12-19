@@ -22,6 +22,10 @@ export const Splash = withRouter(({ history }) => {
       <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
         Visit My Profile
       </ProfileButton>}
+      {isAuthenticated &&
+      <AlbumButton className={pillGrow} onClick={() => history.push('/album')}>
+        My Music
+      </AlbumButton>}
     </SplashContainer>
   )
 })
@@ -46,6 +50,20 @@ const ProfileButton = styled.button`
   &:hover {
     cursor: pointer;
     background-color: pink;
+    color: black;
+  }
+`;
+
+const AlbumButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  transition: background-color 0.75s, color 0.75s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(224, 201, 99);
     color: black;
   }
 `;
