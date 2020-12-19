@@ -33,7 +33,7 @@ const ProfileImage = styled.img`
   border-radius: 50%; */}
 `;
 
-const HomePageButton = styled.button`
+export const HomePageButton = styled.button`
   border: none;
   outline: none;
   background-color: gray;

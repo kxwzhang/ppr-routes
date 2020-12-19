@@ -1,12 +1,16 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+import { HomePageButton } from './Profile';
 
-export const Album = () => {
+export const Album = withRouter(({ history }) => {
   return (
-    <div>
+    <AlbumContainer>
       <AlbumLink className={albumContainer}
         title="Frank Ocean's Blonde on Apple Music"
-        href='https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music'>
+        href='https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music'
+        target='_blank'
+      >
         <img className={imgCenter}
           alt='Frank Ocean Blonde Album Cover'
           src='https://s3-us-west-1.amazonaws.com/tachyonsio/img/Blonde-Frank_Ocean.jpeg'
@@ -18,15 +22,25 @@ export const Album = () => {
           <dd className='ml0 gray'>Frank Ocean</dd>
         </dl>
       </AlbumLink>
-    </div>
+      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
+        Home
+      </HomePageButton>
+    </AlbumContainer>
   )
-}
+})
 
 /* Tachyons Styles */
 const albumContainer = 'db center mw5 tc black link dim';
 const imgCenter = 'db ba b--black-10';
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
 
 /* Styled Components */
+const AlbumContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const AlbumLink = styled.a`
   border: 1px solid black;
   padding: 5px;
