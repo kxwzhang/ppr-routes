@@ -12,20 +12,26 @@ export const Splash = withRouter(({ history }) => {
 
   if (isLoading) return <div>Loading...</div>
 
+  if (isAuthenticated) {
+    return (
+      <SplashContainer>
+        <div>Auth0 Test</div>
+        <Logout />
+        {modal && <Modal modal={modal} setModal={setModal} />}
+        <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
+          Visit My Profile
+        </ProfileButton>
+        <AlbumButton className={pillGrow} onClick={() => history.push('/album')}>
+          My Music
+        </AlbumButton>
+      </SplashContainer>
+    );
+  }
+
   return (
     <SplashContainer>
       <div>Auth0 Test</div>
       {!isAuthenticated && <Login modal={modal} setModal={setModal} />}
-      {isAuthenticated && <Logout />}
-      {modal && <Modal modal={modal} setModal={setModal} />}
-      {isAuthenticated && 
-      <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
-        Visit My Profile
-      </ProfileButton>}
-      {isAuthenticated &&
-      <AlbumButton className={pillGrow} onClick={() => history.push('/album')}>
-        My Music
-      </AlbumButton>}
     </SplashContainer>
   )
 })
