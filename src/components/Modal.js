@@ -52,7 +52,6 @@ const Auth0Button = styled.button`
   color: black;
   background-color: gray;
   transition: background-color 0.75s, color 0.75s;
-  padding: 2px;
   margin: 5px;
 
   &:hover {

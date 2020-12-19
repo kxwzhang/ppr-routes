@@ -13,12 +13,12 @@ const Private = ({ component: Component, ...args }) => {
   );
 };
 
-const Restricted = ({ component: Component, ...args }) => {
+const Restricted = ({ component: Component, restricted, ...args }) => {
   const { isAuthenticated } = useAuth0();
   return (
     <Route 
       {...args}
-      render={props => !isAuthenticated ? 
+      render={props => isAuthenticated && restricted ? 
         <Component {...props} /> : <Redirect to='/login' />}
     />
   );
