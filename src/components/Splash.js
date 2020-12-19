@@ -38,6 +38,7 @@ const SplashContainer = styled.div`
 
 const ProfileButton = styled.button`
   border: none;
+  outline: none;
   background-color: gray;
   color: white;
   transition: background-color 0.75s, color 0.75s;

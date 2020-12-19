@@ -35,6 +35,7 @@ const ProfileImage = styled.img`
 
 const HomePageButton = styled.button`
   border: none;
+  outline: none;
   background-color: gray;
   color: black;
   transition: background-color 0.75s, color 0.75s;

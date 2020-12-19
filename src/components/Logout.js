@@ -19,6 +19,7 @@ const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
 /* Styled Components */
 const LogoutButton = styled.button`
   border: none;
+  outline: none;
   background-color: gray;
   color: white;
   transition: background-color 0.75s, color 0.75s;

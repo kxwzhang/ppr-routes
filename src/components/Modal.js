@@ -2,20 +2,26 @@ import React from 'react'
 import styled from 'styled-components';
 import { useAuth0 } from '@auth0/auth0-react';
 
-export const Modal = ({ modal, setModal }) => {
+export const Modal = ({ setModal }) => {
   const { loginWithRedirect } = useAuth0();
   return (
     <div>
       <ModalBackground onClick={() => setModal(false)}>
         <ModalChild>
           <div>Please Sign In with Auth0</div>
-          <Auth0Button onClick={() => loginWithRedirect()}>Sign In</Auth0Button>
+          <Auth0Button className={pillGrow} onClick={() => loginWithRedirect()}>
+            Sign In
+          </Auth0Button>
         </ModalChild>
       </ModalBackground>
     </div>
   )
 }
 
+/* Tachyon Styles */
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
+
+/* Styled Components */
 const ModalBackground = styled.div`
   position: fixed;
   top: 0;
@@ -42,6 +48,7 @@ const ModalChild = styled.div`
 
 const Auth0Button = styled.button`
   border: none;
+  outline: none;
   color: black;
   background-color: gray;
   transition: background-color 0.75s, color 0.75s;
