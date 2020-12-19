@@ -6,11 +6,17 @@ export const Logout = () => {
   const { logout } = useAuth0();
   return (
     <div>
-      <LogoutButton onClick={() => logout()}>Logout</LogoutButton>
+      <LogoutButton className={pillGrow} onClick={() => logout()}>
+        Logout
+      </LogoutButton>
     </div>
   )
 }
 
+/* Tachyon Styles */
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
+
+/* Styled Components */
 const LogoutButton = styled.button`
   border: none;
   background-color: gray;

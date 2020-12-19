@@ -19,13 +19,17 @@ export const Splash = withRouter(({ history }) => {
       {isAuthenticated && <Logout />}
       {modal && <Modal modal={modal} setModal={setModal} />}
       {isAuthenticated && 
-      <ProfileButton onClick={() => history.push('/profile')}>
+      <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
         Visit My Profile
       </ProfileButton>}
     </SplashContainer>
   )
 })
 
+/* Tachyon Styles */
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
+
+/* Styled Components */
 const SplashContainer = styled.div`
   display: flex;
   flex-direction: column;

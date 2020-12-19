@@ -7,16 +7,21 @@ export const Profile = withRouter(({ history }) => {
   const { user } = useAuth0();
   return (
     <FlexWrapper className='pa4 tc'>
-      <img className='br-100 ba h3 w3 dib' src={user.picture}/>
+      <ProfileImage className={roundLarge} src={user.picture}/>
       <h2 className=''>{user.name}</h2>
       <h3 className=''>{user.email}</h3>
-      <HomePageButton onClick={() => history.push('/')}>
+      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
         Home
       </HomePageButton>
     </FlexWrapper>
   )
 })
 
+/* Tachyon Styles */
+const roundLarge = 'br-100 ba h3 w3 dib';
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
+
+/* Styled Components */
 const FlexWrapper = styled.div`
   display: flex;
   flex-direction: column;
