@@ -3,7 +3,7 @@ import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 
 const TextInput = ({ label, ...props }) => {
-  cosnt [Field, meta] = useField(props);
+  const [field, meta] = useField(props);
   return (
     <div>
       <label>{label}

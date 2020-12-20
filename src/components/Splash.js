@@ -22,6 +22,9 @@ export const Splash = withRouter(({ history }) => {
         <AlbumButton className={pillGrow} onClick={() => history.push('/album')}>
           My Music
         </AlbumButton>
+        <SubscribeButton className={pillGrow} onClick={() => history.push('/subscribe')}>
+          Go Subscribe
+        </SubscribeButton>
       </SplashContainer>
     );
   }
@@ -61,6 +64,20 @@ const ProfileButton = styled.button`
 `;
 
 const AlbumButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  transition: background-color 0.75s, color 0.75s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(224, 201, 99);
+    color: black;
+  }
+`;
+
+const SubscribeButton = styled.button`
   border: none;
   outline: none;
   background-color: gray;
