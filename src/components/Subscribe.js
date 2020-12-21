@@ -54,7 +54,24 @@ export const Subscribe = () => {
          }}
       >
         <Form>
-
+         <TextInput 
+           label='First Name'
+           name='firstName'
+           type='text'
+           placeholder='Kevin'
+         />
+         <TextInput 
+           label='Last Name'
+           name='lastName'
+           type='text'
+           placeholder='Zhang'
+         />
+         <TextInput 
+           label='Email'
+           name='email'
+           type='email'
+           placeholder='kevinzhang@gmail.com'
+         />
         </Form>
       </Formik>
     </div>
