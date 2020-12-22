@@ -16,6 +16,14 @@ const TextInput = ({ label, ...props }) => {
 
 const SelectInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
+  return (
+    <div>
+      <label>{label}
+        <input {...field} {...props} />
+        {meta.touched && meta.error && <div>{meta.error}</div>}
+      </label>
+    </div>
+  )
 }
 
 export const Subscribe = () => {
