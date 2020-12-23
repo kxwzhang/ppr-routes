@@ -31,6 +31,7 @@ const Checkbox = ({ children, ...props }) => {
   return (
     <div>
       <input type='checkbox' {...field} {...props} />
+      {children}
       {meta.touched && meta.error && <div>{meta.error}</div>}
     </div>
   )
@@ -102,6 +103,9 @@ export const Subscribe = () => {
           <option value='product'>Product</option>
           <option value='other'>Other</option>
          </SelectInput>
+         <Checkbox name='acceptedTerms'>
+           I Agree to Terms & Conditions
+         </Checkbox>
         </Form>
       </Formik>
     </div>
