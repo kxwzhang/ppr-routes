@@ -15,19 +15,24 @@ const TextInput = ({ label, ...props }) => {
 };
 
 const SelectInput = ({ label, ...props }) => {
-  const [field, meta] = useField({ ...props, type: 'checkbox' })
+  const [field, meta] = useField(props)
   return (
     <div>
       <label>{label}
-        <input {...field} {...props} />
+        <select {...field} {...props} />
         {meta.touched && meta.error && <div>{meta.error}</div>}
       </label>
     </div>
   )
 }
 
-const Checkbox = ({ label, ...props }) => {
-  const [field, meta] = useField(props)
+const Checkbox = ({ children, ...props }) => {
+  const [field, meta] = useField({ ...props, type: 'checkbox' })
+  return (
+    <div>
+
+    </div>
+  )
 }
 
 export const Subscribe = () => {
