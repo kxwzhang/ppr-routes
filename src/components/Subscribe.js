@@ -30,7 +30,8 @@ const Checkbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' })
   return (
     <div>
-
+      <input type='checkbox' {...field} {...props} />
+      {meta.touched && meta.error && <div>{meta.error}</div>}
     </div>
   )
 }
