@@ -15,7 +15,7 @@ const TextInput = ({ label, ...props }) => {
 };
 
 const SelectInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props)
+  const [field, meta] = useField({ ...props, type: 'checkbox' })
   return (
     <div>
       <label>{label}
@@ -24,6 +24,10 @@ const SelectInput = ({ label, ...props }) => {
       </label>
     </div>
   )
+}
+
+const Checkbox = ({ label, ...props }) => {
+  const [field, meta] = useField(props)
 }
 
 export const Subscribe = () => {
