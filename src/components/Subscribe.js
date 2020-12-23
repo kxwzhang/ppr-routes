@@ -84,6 +84,14 @@ export const Subscribe = () => {
            type='email'
            placeholder='kevinzhang@gmail.com'
          />
+         <SelectInput label='Job Type' name='jobType'>
+          <option value=''>Select a job type</option>
+          <option value='designer'>Designer</option>
+          <option value='development'>Development</option>
+          <option value='engineer'>Engineer</option>
+          <option value='product'>Product</option>
+          <option value='other'>Other</option>
+         </SelectInput>
         </Form>
       </Formik>
     </div>
