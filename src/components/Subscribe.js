@@ -47,6 +47,7 @@ export const Subscribe = () => {
           lastName: '',
           email: '',
           acceptedTerms: false,
+          privacyTerms: false,
           jobType: ''
         }}
         validationSchema={Yup.object({
@@ -60,6 +61,9 @@ export const Subscribe = () => {
              .email('Invalid email address')
              .required('Required'),
            acceptedTerms: Yup.boolean()
+             .required('Required')
+             .oneOf([true], 'You must accept the terms and conditions.'),
+           privacyTerms: Yup.boolean()
              .required('Required')
              .oneOf([true], 'You must accept the terms and conditions.'),
            jobType: Yup.string()
@@ -105,6 +109,9 @@ export const Subscribe = () => {
          </SelectInput>
          <Checkbox name='acceptedTerms'>
            I Agree to Terms & Conditions
+         </Checkbox>
+         <Checkbox name='privacyTerms'>
+           I Agree to Privacy Conditions
          </Checkbox>
         </Form>
       </Formik>
