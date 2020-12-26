@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
-const { Header, Content, Footer } = Layout
 import styled from 'styled-components'
+const { Header, Content, Footer } = Layout
 
 export const NavigationBar = withRouter(() => {
   return (
@@ -11,21 +11,18 @@ export const NavigationBar = withRouter(() => {
         <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
           {/* <div className="logo" /> */}
           <Logo />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ background: '#141414' }}>
             <Menu.Item key="1">nav 1</Menu.Item>
             <Menu.Item key="2">nav 2</Menu.Item>
             <Menu.Item key="3">nav 3</Menu.Item>
           </Menu>
         </Header>
-        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64, background: '#fff' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-            Content
-          </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Kevin</Footer>
       </Layout>
