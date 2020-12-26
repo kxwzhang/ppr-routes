@@ -21,6 +21,9 @@ export const NavigationBar = () => {
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
+          <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+            Content
+          </div>
         </Content>
       </Layout>
     </div>
