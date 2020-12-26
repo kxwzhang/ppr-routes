@@ -5,6 +5,7 @@ import { Splash } from './components/Splash';
 import { Profile } from './components/Profile';
 import { Album } from './components/Album';
 import { Subscribe } from './components/Subscribe';
+import { NavigationBar } from './components/NavigationBar'
 
 function App() {
   return (
