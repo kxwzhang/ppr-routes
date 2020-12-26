@@ -15,6 +15,9 @@ export const NavigationBar = () => {
             <Menu.Item key="3">nav 3</Menu.Item>
           </Menu>
         </Header>
+        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+     
+        </Content>
       </Layout>
     </div>
   )
