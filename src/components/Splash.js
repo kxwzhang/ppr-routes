@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Login } from './Login';
@@ -16,15 +16,15 @@ export const Splash = withRouter(({ history }) => {
       <SplashContainer>
         <div>Auth0 Test</div>
         <Logout />
-        <ProfileButton className={pillGrow} onClick={() => history.push('/profile')}>
-          Visit My Profile
-        </ProfileButton>
-        <AlbumButton className={pillGrow} onClick={() => history.push('/album')}>
-          My Music
-        </AlbumButton>
-        <SubscribeButton className={pillGrow} onClick={() => history.push('/subscribe')}>
-          Go Subscribe
-        </SubscribeButton>
+        <Link to="/profile">
+          <ProfileButton className={pillGrow}>Visit My Profile</ProfileButton>
+        </Link>
+        <Link to="/album">
+          <AlbumButton className={pillGrow}>My Music</AlbumButton>
+        </Link>
+        <Link to="/subscribe">
+          <SubscribeButton className={pillGrow}>Go Subscribe</SubscribeButton>
+        </Link>
       </SplashContainer>
     );
   }

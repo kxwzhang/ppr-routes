@@ -12,7 +12,7 @@ const { Footer } = Layout
 function App() {
   return (
     <div>
-      <NavigationBar />
+      {/* <NavigationBar /> */}
       <Switch>
         <ProtectedRoute exact path='/profile' component={Profile} />
         <ProtectedRoute exact path='/album' component={Album} />
