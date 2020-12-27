@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout
 export const NavigationBar = withRouter(() => {
   return (
     <Layout>
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <Header className="fixed top-0 left-0 z-1 w-100">
         <Logo />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ background: '#141414' }}>
           <Link to="/profile"><Menu.Item key="1">Profile</Menu.Item></Link>
@@ -15,11 +15,11 @@ export const NavigationBar = withRouter(() => {
           <Link to="/music"><Menu.Item key="3">Subscribe</Menu.Item></Link>
         </Menu>
       </Header>
-      <Breadcrumb style={{ margin: '16px 0' }}>
+      {/* <Breadcrumb style={{ margin: '16px 0' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
         <Breadcrumb.Item>App</Breadcrumb.Item>
-      </Breadcrumb>
+      </Breadcrumb> */}
     </Layout>
   )
 })
