@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import styled from 'styled-components'
 const { Header, Content, Footer } = Layout
@@ -12,9 +12,9 @@ export const NavigationBar = withRouter(() => {
           {/* <div className="logo" /> */}
           <Logo />
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ background: '#141414' }}>
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
+            <Link to="/profile"><Menu.Item key="1">Profile</Menu.Item></Link>
+            <Link to="/subscribe"><Menu.Item key="2">Music</Menu.Item></Link>
+            <Link to="/music"><Menu.Item key="3">Subscribe</Menu.Item></Link>
           </Menu>
         </Header>
         <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64, background: '#fff' }}>
