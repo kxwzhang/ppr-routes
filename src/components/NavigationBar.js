@@ -6,27 +6,21 @@ const { Header, Content, Footer } = Layout
 
 export const NavigationBar = withRouter(() => {
   return (
-    // <div>
-      <Layout>
-        <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-          {/* <div className="logo" /> */}
-          <Logo />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ background: '#141414' }}>
-            <Link to="/profile"><Menu.Item key="1">Profile</Menu.Item></Link>
-            <Link to="/subscribe"><Menu.Item key="2">Music</Menu.Item></Link>
-            <Link to="/music"><Menu.Item key="3">Subscribe</Menu.Item></Link>
-          </Menu>
-        </Header>
-        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64, background: '#fff' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>Kevin</Footer>
-      </Layout>
-    // </div>
+    <Layout>
+      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Logo />
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ background: '#141414' }}>
+          <Link to="/profile"><Menu.Item key="1">Profile</Menu.Item></Link>
+          <Link to="/subscribe"><Menu.Item key="2">Music</Menu.Item></Link>
+          <Link to="/music"><Menu.Item key="3">Subscribe</Menu.Item></Link>
+        </Menu>
+      </Header>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+    </Layout>
   )
 })
 
