@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import styled from 'styled-components'
-const { Header, Content, Footer } = Layout
+const { Header } = Layout
 
 export const NavigationBar = withRouter(() => {
   return (
