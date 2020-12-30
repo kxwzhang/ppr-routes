@@ -39,7 +39,7 @@ const Checkbox = ({ children, ...props }) => {
 
 export const Subscribe = () => {
   return (
-    <div>
+    <div className="flex flex-column items-center">
       <h1>Subscribe!</h1>
       <Formik
         initialValues={{
