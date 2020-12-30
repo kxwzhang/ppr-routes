@@ -100,7 +100,7 @@ export const Subscribe = () => {
            placeholder='kevinzhang@gmail.com'
          />
          <SelectInput label='Job Type' name='jobType'>
-          <option value=''>Select a job type</option>
+          <option disabled value=''>Select a job type</option>
           <option value='designer'>Designer</option>
           <option value='development'>Development</option>
           <option value='engineer'>Engineer</option>
