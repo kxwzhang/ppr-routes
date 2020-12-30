@@ -21,7 +21,7 @@ function App() {
           <Route exact path='/' component={Splash} />
         </Switch>
       </Content>
-      <Footer style={{ textAlign: 'center', position: 'fixed' }}>Footer Goes Here!</Footer>
+      <Footer style={{ textAlign: 'center' }}>Footer Goes Here!</Footer>
     </div>
   );
 }
