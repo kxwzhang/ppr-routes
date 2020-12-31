@@ -1,10 +1,10 @@
 import React from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import styled from 'styled-components'
 const { Header } = Layout
 
-export const NavigationBar = withRouter(() => {
+export const NavigationBar = () => {
   return (
     <Layout>
       <Header className="fixed top-0 left-0 z-1 w-100">
@@ -22,8 +22,9 @@ export const NavigationBar = withRouter(() => {
       </Breadcrumb>
     </Layout>
   )
-})
+}
 
+/* Styled Components */
 const Logo = styled.div`
   width: 120px;
   height: 31px;
