@@ -1,21 +1,23 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useAuth0 } from '@auth0/auth0-react';
 
-export const Profile = withRouter(({ history }) => {
+export const Profile = () => {
   const { user } = useAuth0();
   return (
     <FlexWrapper className='pa4 tc'>
       <ProfileImage className={roundLarge} src={user.picture}/>
       <h2 className=''>{user.name}</h2>
       <h3 className=''>{user.email}</h3>
-      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
-        Home
-      </HomePageButton>
+      <Link to="/">
+        <HomePageButton className={pillGrow}>
+          Home
+        </HomePageButton>
+      </Link>
     </FlexWrapper>
   )
-})
+}
 
 /* Tachyon Styles */
 const roundLarge = 'br-100 ba h3 w3 dib';
