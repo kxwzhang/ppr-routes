@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import { HomePageButton } from './Profile'
 
 const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -115,6 +116,7 @@ export const Subscribe = () => {
          </Checkbox>
         </Form>
       </Formik>
+      <div>Add button here</div>
     </div>
   )
 }
