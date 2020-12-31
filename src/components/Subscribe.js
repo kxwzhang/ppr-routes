@@ -116,7 +116,9 @@ export const Subscribe = () => {
          </Checkbox>
         </Form>
       </Formik>
-      <div>Add button here</div>
+      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
+        Home
+      </HomePageButton>
     </div>
   )
 }
