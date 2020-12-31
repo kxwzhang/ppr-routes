@@ -117,9 +117,11 @@ export const Subscribe = () => {
          </Checkbox>
         </Form>
       </Formik>
-      <HomePageButton className={pillGrow}>
-        <Link to="/">Home</Link>
-      </HomePageButton>
+      <Link to="/">
+        <HomePageButton className={pillGrow}>
+          Home
+        </HomePageButton>
+      </Link>
     </div>
   )
 }
