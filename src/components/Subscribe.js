@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import { HomePageButton } from './Profile'
