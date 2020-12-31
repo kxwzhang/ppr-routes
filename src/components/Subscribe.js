@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-redux'
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import { HomePageButton } from './Profile'
@@ -116,8 +117,8 @@ export const Subscribe = () => {
          </Checkbox>
         </Form>
       </Formik>
-      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
-        Home
+      <HomePageButton className={pillGrow}>
+        <Link to="/">Home</Link>
       </HomePageButton>
     </div>
   )
