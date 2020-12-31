@@ -122,3 +122,6 @@ export const Subscribe = () => {
     </div>
   )
 }
+
+/* Tachyon styles */
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
