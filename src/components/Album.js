@@ -1,9 +1,9 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { HomePageButton } from './Profile';
 
-export const Album = withRouter(({ history }) => {
+export const Album = () => {
   return (
     <AlbumContainer>
       <AlbumLink className={albumContainer}
@@ -22,12 +22,14 @@ export const Album = withRouter(({ history }) => {
           <dd className='ml0 gray'>Frank Ocean</dd>
         </dl>
       </AlbumLink>
-      <HomePageButton className={pillGrow} onClick={() => history.push('/')}>
-        Home
-      </HomePageButton>
+      <Link to="/">
+        <HomePageButton className={pillGrow}>
+          Home
+        </HomePageButton>
+      </Link>
     </AlbumContainer>
   )
-})
+}
 
 /* Tachyons Styles */
 const albumContainer = 'db center mw5 tc black link dim';
