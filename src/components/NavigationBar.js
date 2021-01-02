@@ -15,7 +15,7 @@ export const NavigationBar = () => {
           <Link to="/music"><Menu.Item key="3">Subscribe</Menu.Item></Link>
         </Menu>
       </Header>
-      <Breadcrumb>
+      <Breadcrumb style={{ padding: '20px' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
         <Breadcrumb.Item>App</Breadcrumb.Item>
