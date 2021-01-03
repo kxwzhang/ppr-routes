@@ -25,6 +25,8 @@ export const Splash = withRouter(({ history }) => {
         <Link to="/subscribe">
           <SubscribeButton className={pillGrow}>Go Subscribe</SubscribeButton>
         </Link>
+        <Link to="/dropdown">
+        </Link>
       </SplashContainer>
     );
   }
