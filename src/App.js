@@ -7,6 +7,7 @@ import { Profile } from './components/Profile';
 import { Album } from './components/Album';
 import { Subscribe } from './components/Subscribe';
 import { NavigationBar } from './components/NavigationBar'
+import { DropdownTest } from './components/DropdownTest'
 const { Footer, Content } = Layout
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <ProtectedRoute exact path='/profile' component={Profile} />
           <ProtectedRoute exact path='/album' component={Album} />
           <ProtectedRoute exact path='/subscribe' component={Subscribe} />
+          <ProtectedRoute exact path='/dropdown' component={DropdownTest} />
           <Route exact path='/' component={Splash} />
         </Switch>
       </Content>
