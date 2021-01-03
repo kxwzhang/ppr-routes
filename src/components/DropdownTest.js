@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, Dropdown, Button, message, Space, Tooltip } from 'antd'
 import { DownOutlined, UserOutlined } from '@ant-design/icons'
 
@@ -56,6 +57,11 @@ export const DropdownTest = () => {
           </Button>
         </Dropdown>
       </Space>
+      <Link to="/">
+        <HomePageButton className={pillGrow}>
+          Home
+        </HomePageButton>
+      </Link>
     </div>
   )
 }
