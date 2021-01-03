@@ -26,6 +26,7 @@ export const Splash = withRouter(({ history }) => {
           <SubscribeButton className={pillGrow}>Go Subscribe</SubscribeButton>
         </Link>
         <Link to="/dropdown">
+          <DropdownButton className={pillGrow}>My Dropdown</DropdownButton>
         </Link>
       </SplashContainer>
     );
@@ -92,4 +93,6 @@ const SubscribeButton = styled.button`
     color: black;
   }
 `;
+
+
 
