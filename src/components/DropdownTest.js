@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, Dropdown, Button, message, Space, Tooltip } from 'antd'
 import { DownOutlined, UserOutlined } from '@ant-design/icons'
+import { HomePageButton } from './Profile'
 
 const handleButtonClick = (e) => {
   message.info('Click on left button.')
@@ -65,3 +66,6 @@ export const DropdownTest = () => {
     </div>
   )
 }
+
+/* Tachyons Styling */
+const pillGrow = 'f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black';
