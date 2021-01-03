@@ -94,5 +94,16 @@ const SubscribeButton = styled.button`
   }
 `;
 
+const DropdownButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: white;
+  transition: background-color 0.75s, color 0.75s;
 
-
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(41, 179, 179);
+    color: black;
+  }
+`;
