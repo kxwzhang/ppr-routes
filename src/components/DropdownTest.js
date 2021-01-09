@@ -50,7 +50,7 @@ export const DropdownTest = () => {
             React.cloneElement(rightButton, { loading: true }),
           ]}
         >
-          With Tooltip
+          Tooltip Information
         </Dropdown.Button>
         <Dropdown overlay={menu}>
           <Button>
