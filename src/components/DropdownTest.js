@@ -39,7 +39,7 @@ export const DropdownTest = () => {
           Dropdown
         </Dropdown.Button>
         <Dropdown.Button onClick={handleButtonClick} overlay={menu} disabled>
-          Dropdown
+          Dropdown DISABLED
         </Dropdown.Button>
         <Dropdown.Button
           overlay={menu}
